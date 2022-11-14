@@ -1,0 +1,278 @@
+@Override
+	public void keyPressed(KeyEvent e) {
+
+			/*
+			//Used for testing to try and see why I was having issues with my arrow keys
+
+			int key = e.getKeyCode();
+			char keyText = e.getKeyChar();
+			String text = KeyEvent.getKeyText(key);
+			System.out.println(" " + keyText);
+			System.out.println(key);
+			System.out.println(text);
+			*/
+
+
+		switch (e.getKeyCode()) {
+			case KeyEvent.VK_UP:
+				if(traverse == 0 ) {
+					scaleSquare += scaleDelta;
+				}
+				else if(traverse == 1) {
+					scaleParallelogram += scaleDelta;
+				}
+				else if(traverse == 2) {
+					scaleSmallTriangle1 += scaleDelta;
+				}
+				else if(traverse == 3) {
+					scaleSmallTriangle2 += scaleDelta;
+				}
+				else if(traverse == 4) {
+					scaleMediumTriangle += scaleDelta;
+				}
+				else if (traverse == 5) {
+					scaleBigTriangle1 += scaleDelta;
+				}
+				else if (traverse == 6) {
+					scaleBigTriangle2 += scaleDelta;
+				}
+				break;
+
+				/*
+				switch (traverse) {
+					case 0:
+						scaleSquare += scaleDelta;
+						break;
+
+					case 1:
+						scaleParallelogram += scaleDelta;
+						break;
+
+					case 2:
+						scaleSmallTriangle1 += scaleDelta;
+						break;
+
+					case 3:
+						scaleSmallTriangle2 += scaleDelta;
+						break;
+
+					case 4:
+						scaleMediumTriangle += scaleDelta;
+						break;
+
+					case 5:
+						scaleBigTriangle1 += scaleDelta;
+						break;
+
+					case 6:
+						scaleBigTriangle2 += scaleDelta;
+						break;
+
+				}}*/
+
+			case KeyEvent.VK_DOWN:
+
+				if(traverse == 0 ) {
+					scaleSquare -= scaleDelta;
+				}
+
+				else if(traverse == 1) {
+					scaleParallelogram -= scaleDelta;
+				}
+
+				else if(traverse == 2) {
+					scaleSmallTriangle1 -= scaleDelta;
+				}
+
+				else if(traverse == 3){
+					scaleSmallTriangle2 -= scaleDelta;
+				}
+
+				else if(traverse == 4) {
+					scaleMediumTriangle -= scaleDelta;
+				}
+
+				else if (traverse == 5) {
+					scaleBigTriangle1 -= scaleDelta;
+				}
+
+				else if (traverse == 6) {
+					scaleBigTriangle2 -= scaleDelta;
+				}
+				break;
+
+
+			case KeyEvent.VK_RIGHT:
+				if (traverse == 0 ) {
+					if (angleSquare > 0 || angleSquare < 360)
+					{
+						angleSquare -= angleDelta;
+					}
+				}
+
+				else if (traverse == 1){
+						if (angleParallelogram > 0 || angleParallelogram < 360)
+						{
+							angleParallelogram -= angleDelta;
+						}
+				}
+
+				else if (traverse == 2){
+						if (angleSmallTriangle1 > 0 || angleSmallTriangle1 < 360)
+						{
+							angleSmallTriangle1 -= angleDelta;
+						}
+				}
+
+				else if (traverse == 3){
+						if (angleSmallTriangle2 > 0 || angleSmallTriangle2 < 360)
+						{
+							angleSmallTriangle2 -= angleDelta;
+						}
+				}
+
+				else if (traverse == 4){
+						if (angleMediumTriangle > 0 || angleMediumTriangle < 360)
+						{
+							angleMediumTriangle -= angleDelta;
+						}
+				}
+
+				else if (traverse == 5){
+						if (angleBigTriangle1 > 0 || angleBigTriangle1 < 360)
+						{
+							angleBigTriangle1 -= angleDelta;
+						}
+				}
+
+				else if (traverse == 6){
+						if (angleBigTriangle2 > 0 || angleBigTriangle2 < 360)
+						{
+							angleBigTriangle2 -= angleDelta;
+						}
+				}
+				break;
+
+
+			case KeyEvent.VK_LEFT:
+				if(traverse == 0 ) {
+					if (angleSquare > 0 || angleSquare < 360)
+					{
+						angleSquare += angleDelta;
+					}
+				}
+
+				else if(traverse == 1) {
+					if (angleParallelogram > 0 || angleParallelogram < 360)
+					{
+						angleParallelogram += angleDelta;
+					}
+				}
+
+				else if(traverse == 2) {
+					if (angleSmallTriangle1 > 0 || angleSmallTriangle1 < 360)
+					{
+						angleSmallTriangle1 += angleDelta;
+					}
+				}
+
+				else if(traverse == 3) {
+					if (angleBigTriangle2 > 0 || angleSmallTriangle2 < 360)
+					{
+						angleSmallTriangle2 += angleDelta;
+					}
+				}
+
+				else if(traverse == 4) {
+					if (angleMediumTriangle > 0 || angleMediumTriangle < 360)
+					{
+						angleMediumTriangle += angleDelta;
+					}
+				}
+
+				else if (traverse == 5) {
+					if (angleBigTriangle1 > 0 || angleBigTriangle1 < 360)
+					{
+						angleBigTriangle1 += angleDelta;
+					}
+				}
+
+				else if (traverse == 6) {
+					if (angleBigTriangle2 > 0 || angleBigTriangle2 < 360)
+					{
+						angleBigTriangle2 += angleDelta;
+					}
+				}
+				break;
+
+
+			// THIS IS FOR THE WHOLE BLUEPRINT
+			case KeyEvent.VK_ADD:
+				scale += 0.1f;
+				break;
+
+
+			case KeyEvent.VK_SUBTRACT:
+				scale -= 0.1f;
+				break;
+
+
+			case KeyEvent.VK_I:
+				translateY += 0.1f;
+				break;
+
+
+			case KeyEvent.VK_K:
+				translateY -= 0.1f;
+				break;
+
+
+			case KeyEvent.VK_J:
+				translateX -= 0.1f;
+				break;
+
+
+			case KeyEvent.VK_L:
+				translateX += 0.1f;
+				break;
+
+
+			case KeyEvent.VK_NUMPAD1:
+				angleBlueprintX += angleDelta;
+				break;
+
+			case KeyEvent.VK_NUMPAD3:
+				angleBlueprintX -= angleDelta;
+				break;
+
+			case KeyEvent.VK_NUMPAD4:
+				angleBlueprintY += angleDelta;
+				break;
+
+			case KeyEvent.VK_NUMPAD6:
+				angleBlueprintY -= angleDelta;
+				break;
+
+			case KeyEvent.VK_NUMPAD7:
+				angleBlueprintZ += angleDelta;
+				break;
+
+			case KeyEvent.VK_NUMPAD9:
+				angleBlueprintZ -= angleDelta;
+				break;
+
+			case KeyEvent.VK_W:
+				if (!gameFinished) {
+					traverse++;
+
+					if (traverse == TOTAL_NUM_OF_SHAPES)
+						traverse = 0;
+				}
+				break;
+
+
+			case KeyEvent.VK_P:
+				perspective = !perspective;
+				break;
+		}
+	}

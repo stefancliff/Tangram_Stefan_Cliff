@@ -1,0 +1,29 @@
+"Menu Options: \n" +
+"Add Button - after selecting a shape from the palette, you can add it to the selected blueprint shape by the Add button\n" +
+"Remove Button - after selecting a shape from the palette, you can remove it from the selected blueprint shape by the Remove button\n" +
+"Finish Button - after the game finished, by pressing on the finish button, you can see your results\n" +
+"New Game Button - generate a new game\n" +
+"Quit Button - quit from the game \n" +
+"Light - you can enable/disable different light models by checking/unchecking  the light chekboxes (global ambient light, ambient, diffuse and specular)\n\n" +
+"\nShape Controls:\n" +
+"W - traverse through the blueprint\n" +
+"Arrow Up - increase the scale of the shape inserted into the blueprint\n" +
+"Arrow Down - reduce the scale of the shape inserted into the blueprint\n" +
+"Arrow Right - rotate the shape inserted into the blueprint to the right\n" +
+"Arrow Left - rotate the shape inserted into the blueprint to the left\n" +
+
+"\nBlueprint Controls:\n" +
+"P - Change between perspective and orthographic projection\n" +
+"I - move the blueprint (translate) up\n" +
+"J - move the blueprint (translate) right\n" +
+"K - move the blueprint (translate) down\n" +
+"L - move the blueprint (translate) left\n" +
+
+"\nNumpad + - zoom in\n" +
+"Numpad - - zoom out\n" +
+"Numpad 1 - rotate blueprint positively around X axis\n" +
+"Numpad 3 - rotate blueprint negatively around X axis\n" +
+"Numpad 4 - rotate blueprint positively around Y axis\n" +
+"Numpad 6 - rotate blueprint negatively around Y axis\n" +
+"Numpad 7 - rotate blueprint positively around Z axis\n" +
+"Numpad 9 - rotate blueprint negatively around Z axis\n"
